@@ -2,8 +2,6 @@
 using ShapeTree.Domain;
 using Xunit;
 
-using ShapeTree.Application;
-
 public class ShapeDrawingTests
 {
     [Fact]

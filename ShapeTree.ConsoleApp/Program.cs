@@ -4,36 +4,33 @@ using ShapeTree.Domain;
 
 var services = new ServiceCollection();
 
-
-// ==========================
 // Output strategy switch
-// ==========================
-// Run:
-//   dotnet run        -> console
-//   dotnet run -- file -> file
+// dotnet run        -> console
+// dotnet run -- file -> file
 
-var useFileOutput = args.Length > 0 &&
+var userWantsFileOutput = args.Length > 0 &&
                     args[0].Equals("file", StringComparison.OrdinalIgnoreCase);
 
-if (useFileOutput)
+if (userWantsFileOutput)
 {
     services.AddSingleton<IDrawOutput>(_ =>
         new FileDrawOutput("shapes.txt"));
-    Console.Write("The results have been written to the file shapes.txt");
+
+    Console.WriteLine("The results have been written to the file shapes.txt");
 }
 else
 {
     services.AddSingleton<IDrawOutput, ConsoleDrawOutput>();
-    Console.Write("The results have been written here");
+    Console.WriteLine("The results have been written here");
 }
 
 services.AddSingleton<ShapeTreeDrawer>();
 
-var provider = services.BuildServiceProvider();
+using var provider = services.BuildServiceProvider();
 
 
 // ==========================
-// Build FULL tree structure
+// tree structure
 // ==========================
 
 // Root

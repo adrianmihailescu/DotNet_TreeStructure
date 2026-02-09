@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ShapeTree.Domain\ShapeTree.Domain.csproj" />
-    <ProjectReference Include="..\ShapeTree.Application\ShapeTree.Application.csproj" />
   </ItemGroup>
 
 </Project>

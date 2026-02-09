@@ -15,6 +15,11 @@ public abstract class Shape : IShape
 
     public void AddChild(IShape shape)
     {
+        if (shape is null)
+        {
+            throw new ArgumentNullException(nameof(shape));
+        }
+
         _children.Add(shape);
     }
 

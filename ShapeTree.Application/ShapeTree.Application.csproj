@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShapeTree.Domain\ShapeTree.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

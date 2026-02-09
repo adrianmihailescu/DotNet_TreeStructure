@@ -1,0 +1,7 @@
+Red Square
+├── Blue Circle
+│   ├── Green Circle
+│   └── Red Triangle
+└── Yellow Triangle
+    ├── Blue Square
+    └── Green Triangle

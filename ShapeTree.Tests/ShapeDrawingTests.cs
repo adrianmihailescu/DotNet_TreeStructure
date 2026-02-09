@@ -1,10 +1,16 @@
-﻿namespace ShapeTree.Tests;
+﻿using ShapeTree.Application;
+using ShapeTree.Domain;
+using Xunit;
 
-public class UnitTest1
+public class ShapeDrawingTests
 {
     [Fact]
-    public void Test1()
+    public void Draw_ReturnsCorrectShapeDescription()
     {
+        var shape = new Circle(Color.Blue);
 
+        var result = shape.Draw();
+
+        Assert.Equal("Blue Circle", result);
     }
 }

@@ -1,3 +1,5 @@
+namespace ShapeTree.Domain;
+
 public sealed class Triangle : Shape
 {
     public Triangle(Color color) : base(color) { }
